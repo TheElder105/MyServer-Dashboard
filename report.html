@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>تقديم بلاغ | Server Name</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+</head>
+<body>
+    <header>
+        <div class="nav-container">
+            <div class="logo">SERVER<span>LOGS</span></div>
+            <nav>
+                <a href="index.html">الرئيسية</a>
+                <a href="logs.html">سجل المساجين</a>
+                <a href="report.html" class="active">تقديم بلاغ</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container animate__animated animate__fadeIn">
+        <div class="report-box glass">
+            <h2 class="section-title">إرسال بلاغ جديد</h2>
+            <form action="https://formspree.io/f/xwvabozb" method="POST">
+                <div class="input-group">
+                    <label>اسمك في اللعبة:</label>
+                    <input type="text" name="المبلغ" placeholder="مثال: Player_One" required>
+                </div>
+                <div class="input-group">
+                    <label>اسم المخالف:</label>
+                    <input type="text" name="المخالف" placeholder="من الشخص المخالف؟" required>
+                </div>
+                <div class="input-group">
+                    <label>نوع المخالفة:</label>
+                    <select name="السبب">
+                        <option value="هاك">هاك (Hack)</option>
+                        <option value="تخريب">تخريب (Griefing)</option>
+                        <option value="شتم">كلام بذيء (Toxic)</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label>رابط الدليل (اختياري - مكنك تركه فارغاً):</label>
+                    <input type="url" name="الدليل" placeholder="رابط صورة أو فيديو (اختياري)">
+                </div>
+                <button type="submit" class="submit-btn">إرسال البلاغ الآن</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
